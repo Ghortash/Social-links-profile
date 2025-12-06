@@ -1,0 +1,126 @@
+:root {
+   --green: hsl(75, 94%, 57%);
+   --white: hsl(0, 0%, 100%);
+   --gray-700: hsl(0, 0%, 20%);
+   --gray-800: hsl(0, 0%, 12%);
+   --gray-900: hsl(0, 0%, 8%);
+}
+
+@font-face {
+   font-family: "Inter Regular";
+   src: url(assets/fonts/Inter-Regular.ttf);
+   font-weight: 400;
+}
+
+@font-face {
+   font-family: "Inter SemiBold";
+   src: url(assets/fonts/Inter-SemiBold.ttf);
+   font-weight: 600;
+}
+
+@font-face {
+   font-family: "Inter Bold";
+   src: url(assets/fonts/Inter-Bold.ttf);
+   font-weight: 700;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   height: 100%;
+}
+
+body {
+   height: 100%;
+   background-color: var(--gray-900);
+}
+
+.container {
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.main-block {
+   width: 100%;
+   max-width: 24rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-radius: 12px;
+   padding: 2.5rem;
+   margin: 0 1.5rem;
+   text-align: center;
+   background-color: var(--gray-800);
+}
+
+.main-block__avatar {
+   margin-bottom: 1.5rem;
+}
+
+.main-block__avatar__image {
+   width: 5.5rem;
+   display: block;
+   border-radius: 50%;
+}
+
+.main-block__aboutMe {
+   margin-bottom: 1.5rem;
+}
+
+.main-block__aboutMe__name {
+   font-family: "Inter Bold";
+   font-size: 1.5rem;
+   margin-bottom: 0.75rem;
+   color: var(--white);
+}
+
+.main-block__aboutMe__location {
+   font-family: "Inter SemiBold";
+   font-size: 0.875rem;
+   margin-bottom: 2rem;
+   color: var(--green);
+}
+
+.main-block__aboutMe__description {
+   font-family: "Inter Regular";
+   font-size: 0.875rem;
+   color: var(--white);
+}
+
+.main-block__links {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   font-family: "Inter SemiBold";
+   font-size: 0.875rem;
+}
+
+.main-block__links__link {
+   border-radius: 0.5rem;
+   text-decoration: none;
+   padding: 14px;
+   background-color: var(--gray-700);
+   color: var(--white);
+   transition: 0.2s;
+}
+
+.main-block__links__link:not(:last-child) {
+   margin-bottom: 1rem;
+}
+
+.main-block__links__link:hover {
+   background-color: var(--green);
+   color: var(--gray-800);
+}
+
+@media (max-width: 375px) {
+   .main-block {
+      padding: 1.5rem;
+   }
+}
